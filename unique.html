@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    var arr = [1,2,3,1,'a','b','a','你好','c','你好'];
+Array.prototype.unique = function(){
+    var n={},r=[];
+    for(var i =0;i<this.length;i++){
+        if(!n[this[i]]){
+            n[this[i]] = 1;
+            r.push(this[i]);
+        }
+    }
+    return r;
+}
+    alert(arr.unique());
+
+Array.prototype.unique1 = function(){
+    var n =[];
+    for(var i=0;i<this.length;i++){
+        if(n.indexOf(this[i])==-1)n.push(this[i])
+    }
+    return n;
+}
+    alert(arr.unique1());
+    Array.prototype.unique2 = function(){
+        var n = [this[0]];
+        for(var i =1;i<this.length;i++){
+            if(this.indexOf(this[i])==i)n.push(this[i]);
+        }
+        return n;
+    }
+
+    alert(arr.unique2());
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组排序</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr=[1,2,43,123,4567,2,5,3];
+    for(var x=0;x<arr.length;x++){
+        for(var y=x+1;y<arr.length;y++){
+            if(arr[x]>arr[y]){
+                var temp=arr[x];
+                arr[x]=arr[y];
+                arr[y]=temp;
+            }
+        }
+    }
+    alert(arr);
+
+
+</script>
